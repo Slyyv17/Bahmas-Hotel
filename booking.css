@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pri-color: #fff;
+    --sec-clr: rgb(33, 39, 53);
+    --tet-clr: rgb(252, 135, 68);
+    --third-clr: rgb(167, 167, 167);
+    --pry-ff: "Lato",
+        sans-serif;
+    --label-ff: "Open Sans",
+        sans-serif;
+    --heading-ff: "Montserrat",
+        sans-serif;
+    --main-ff: "Cormorant Garamond",
+        serif;
+}
+
+body {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#booking-terminal {
+    margin-top: 1em;
+    width: 60%;
+    height: 95vh;
+    border: 1px solid rgb(167, 167, 167);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading-box {
+    /* border: 1px solid #000; */
+    height: 12vh;
+    width: 30em;
+}
+
+.booking-header {
+    text-align: center;
+    padding-top: 1.8em;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: var(--heading-ff);
+}
+
+.email-text,
+.username-text,
+.booking-header,
+.check-in,
+.check-out,
+.room,
+.guests {
+    color: var(--sec-clr);
+    font-size: 1.2rem;
+    font-family: var(--label-ff);
+    font-weight: 700;
+}
+
+.email-lbl-box,
+.username-lbl-box,
+.check-in-lbl-box,
+.check-out-lbl-box,
+.room-lbl-box,
+.guest-lbl-box {
+    height: 3.5vh;
+    width: 30em;
+    /* border: 1px solid red; */
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1em;
+}
+
+.check-in-box,
+.check-out-box,
+.room-box,
+.guest-box {
+    border: 0;
+    outline: none;
+    height: 6vh;
+    width: 30em;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+input,
+select {
+    height: 6vh;
+    width: 30em;
+    padding: 0 1em 0 1em;
+    font-size: 1rem;
+    border-radius: 1em;
+    border: 1px solid rgb(192, 192, 192);
+    background-color: var(--border-clr);
+}
+
+input[type=email]::placeholder {
+    color: var(--border-clr);
+}
+
+input[type=text]::placeholder {
+    color: var(--border-clr);
+}
+
+option {
+    background-color: var(--border-clr);
+    height: 30vh;
+}
+
+.booking-btn-box {
+    width: 30em;
+    height: 8vh;
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#booking-btn {
+    width: 9em;
+    display: inline-block;
+    height: 3.2em;
+    border: 0;
+    outline: none;
+    background-color: var(--sec-clr);
+    color: var(--tet-clr);
+    font-size: 1rem;
+    text-transform: capitalize;
+    border-radius: 2em;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transition: all 600ms;
+}
+
+#booking-btn:hover {
+    cursor: pointer;
+    background-color: var(--third-clr);
+    color: var(--sec-clr);
+}
+
+/* mobile devices only */
+@media only screen and (max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #booking-terminal {
+        width: 22em;
+    }
+
+    .email-lbl-box,
+    .username-lbl-box,
+    .check-in-lbl-box,
+    .check-out-lbl-box,
+    .room-lbl-box,
+    .guest-lbl-box {
+        height: 3.5vh;
+        width: 20em;
+        /* border: 1px solid red; */
+        padding-left: 0em;
+    }
+
+    .check-in-box,
+    .check-out-box,
+    .room-box,
+    .guest-box {
+        height: 6vh;
+        width: 20em;
+    }
+
+    input,
+    select {
+        height: 6vh;
+        width: 20em; 
+    }
+
+    .booking-btn-box {
+        width: 20em;
+        height: 8vh; 
+    }
+
+    .heading-box {
+        height: 12vh;
+        width: 20em;
+    }
+}
+
+/* tablet and ipads */
+@media only screen and (min-width: 770px) and (max-width: 991px) { 
+    #booking-terminal {
+        width: 50em;
+    }
+
+    .email-lbl-box,
+    .username-lbl-box,
+    .check-in-lbl-box,
+    .check-out-lbl-box,
+    .room-lbl-box,
+    .guest-lbl-box {
+        height: 3.5vh;
+        width: 40em;
+        /* border: 1px solid red; */
+        padding-left: 0em;
+    }
+
+    .check-in-box,
+    .check-out-box,
+    .room-box,
+    .guest-box {
+        height: 7vh;
+        width: 40em;
+    }
+
+    input,
+    select {
+        height: 7vh;
+        width: 40em;
+    }
+
+    label {
+        font-size: 1.5rem;
+    }
+
+    input[type=email]::placeholder {
+        color: var(--border-clr);
+        font-size: 1.2rem;
+    }
+    
+    input[type=text]::placeholder {
+        color: var(--border-clr);
+        font-size: 1.2rem;
+    }
+
+    option {
+        font-size: 2rem;
+    }
+
+    .booking-btn-box {
+        width: 40em;
+        height: 10vh;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+
+    #booking-btn {
+        width: 10em;
+        height: 3em;
+        font-size: 1.3rem;
+    }
+    
+    .heading-box {
+        height: 12vh;
+        width: 20em;
+    }
+    
+    .booking-header {
+        font-size: 1.8rem;
+    }
+}

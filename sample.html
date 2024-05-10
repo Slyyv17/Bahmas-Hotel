@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #booking-terminal {
+    width: 30%;
+    height: 80vh;
+    border: 1px solid rgb(216, 216, 216);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading-box {
+    /* border: 1px solid #000; */
+    height: 12vh;
+    width: 30em;
+}
+
+.booking-header {
+    text-align: center;
+    padding-top: 1.8em;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: var(--heading-ff);
+}
+
+.booking-header,
+.check-in,
+.check-out,
+.room,
+.guests {
+    color: var(--sec-clr);
+    font-size: 1.2rem;
+    font-family: var(--label-ff);
+    font-weight: 700;
+}
+
+.check-in-lbl-box,
+.check-out-lbl-box,
+.room-lbl-box,
+.guest-lbl-box {
+    height: 3.5vh;
+    width: 30em;
+    /* border: 1px solid red; */
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1em;
+}
+
+.check-in-box,
+.check-out-box,
+.room-box,
+.guest-box {
+    border: 0;
+    outline: none;
+    height: 8vh;
+    width: 30em;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+input,
+select {
+    height: 8vh;
+    padding: 0 1em 0 1em;
+    text-transform: capitalize;
+    font-size: 1rem;
+    border-radius: 3em;
+    border: 1px solid rgb(192, 192, 192);
+    background-color: var(--border-clr);
+}
+
+option {
+    background-color: var(--border-clr);
+    height: 30vh;
+}
+
+.booking-btn-box {
+    width: 30em;
+    height: 8vh;
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#booking-btn {
+    width: 9em;
+    display: inline-block;
+    height: 3.2em;
+    border: 0;
+    outline: none;
+    background-color: var(--sec-clr);
+    color: var(--tet-clr);
+    font-size: 1rem;
+    text-transform: capitalize;
+    border-radius: 2em;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transition: all 600ms;
+}
+
+#booking-btn:hover {
+    cursor: pointer;
+    background-color: var(--third-clr);
+    color: var(--sec-clr);
+}
+
+/* mobile devices only */
+@media only screen and (max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #get-started-terminal {
+        width: 30em;
+    }
+
+    #booking-terminal {
+        width: 30em;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Booking terminal section-->
+    <section id="booking-terminal">
+            <div class="heading-box">
+                <h2 class="booking-header">Book a room</h2>
+            </div>
+        
+    <!-- Check in -->
+    <div class="check-in-lbl-box">
+                <label for="check-in" class="check-in">Check-in</label>
+            </div>
+        
+            <div class="check-in-box">
+                <input type="date" id="check-in">
+            </div>
+    
+    <!-- Check out -->
+    <div class="check-out-lbl-box">
+                <label for="check-out" class="check-out">Check-out</label>
+            </div>
+        
+            <div class="check-out-box">
+                <input type="date" id="check-out">
+            </div>
+        
+    <!-- Rooms -->
+    <div class="room-lbl-box">
+                <label for="rooms" class="room">Room</label>
+            </div>
+        
+            <div class="room-box">
+                <select id="rooms">
+                    <option value="suite">Suite</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="standard">Standard</option>
+                </select>
+            </div>
+    
+    <!-- Guest -->
+    <div class="guest-lbl-box">
+                <label for="guests" class="guests">Guest(s)</label>
+            </div>
+            <div class="guest-box">
+                <select id="guests">
+                    <option value="6">6 above</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">Individual</option>
+                </select>
+            </div>
+        
+            <div class="booking-btn-box">
+                <button id="booking-btn" onclick="bookNow()">Next <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        
+            <div id="output">
+                <p id="result"></p>
+            </div>
+        </section>
+
+        <script>
+            const roomsSelect = document.getElementById("rooms");
+                const guestsSelect = document.getElementById("guests");
+                const checkInInput = document.getElementById("check-in");
+                const checkOutInput = document.getElementById("check-out");
+                const resultParagraph = document.getElementById("result");
+
+                function updatePrice() {
+                    let roomsSelected = roomsSelect.value;
+                    let guestsSelected = guestsSelect.value;
+                    let checkInInputed = checkInInput.value;
+                    let checkOutInputed = checkOutInput.value;
+
+                    if (roomsSelected && guestsSelected && checkInInputed && checkOutInputed) {
+                        const duration = Math.ceil((new Date(checkOutInput.value) - new Date(checkInInput.value)) / (1000 * 60 * 60 * 24));
+
+                        let price;
+
+                        switch (roomsSelected) {
+                            case "suite":
+                                price = 100000.00; // price for suite room
+                                break;
+                            case "deluxe":
+                                price = 75000.00; // price for deluxe room
+                                break;
+                            case "standard":
+                                price = 50000.00; // price for standard room
+                                break;
+                            default:
+                                resultParagraph.textContent = "Select a room please";
+                                return; // Exit the function if room is not selected
+                        }
+
+                        const totalPrice = price * parseFloat(guestsSelected) * duration;
+                        resultParagraph.textContent = "Total Price: N" + totalPrice.toFixed(2); // Convert totalPrice to string with 2 decimal places
+                    } else {
+                        resultParagraph.textContent = "Please select all options and dates.";
+                    }
+                }
+
+                // output everything
+                function bookNow() {
+                    updatePrice();
+                }
+        </script>
+</body>
+</html>

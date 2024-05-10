@@ -1,0 +1,990 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgba(167, 167, 167, 0.26);
+}
+
+:root {
+    --pri-color: rgb(255, 255, 255); 
+    --sec-clr: rgb(33, 39, 53);
+    --tet-clr: rgb(252, 135, 68);
+    --third-clr: rgb(167, 167, 167);
+    --pry-ff: "Lato",
+        sans-serif;
+    --label-ff: "Open Sans",
+        sans-serif;
+    --heading-ff: "Montserrat",
+        sans-serif;
+    --main-ff: "Cormorant Garamond",
+        serif;
+}
+
+main {
+    background-image: url('images/comfortable-modern-bedroom-with-elegant-decoration-lighting-generative-ai.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+/* Navigation Bar */
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #ffffff00;
+    backdrop-filter: blur(5px);
+    --webkit-backdrop-filter: blur(10px);
+    font-size: 20px;
+}
+
+.logo {
+    margin-left: 5em;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: var(--heading-ff);
+}
+
+.logo_header {
+    display: flex;
+    /* margin-left: 2%; */
+}
+
+.logo-words {
+    color: rgb(252, 135, 68);
+}
+
+.main_nav {
+    display: flex;
+    width: 50%;
+    float: right;
+    /* margin-right: 2%; */
+    justify-content: space-between;
+    list-style: none;
+}
+
+.main_nav li {
+    display: inline;
+    color: #ffffff;
+}
+
+.main_nav li a {
+    color: #ffffff;
+    font-family: var(--heading-ff);
+    text-transform: capitalize;
+    transition: color 600ms;
+}
+
+.main_nav li a:hover {
+    color: rgb(252, 135, 68);
+}
+
+.navbar_toggle {
+    display: none;
+}
+
+.main_nav .first-active {
+    color: rgb(252, 135, 68);
+}
+
+/* Responsive Navigation Bar */
+@media only screen and (max-width : 992px) {
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        background-color: #ffffff00;
+        backdrop-filter: blur(8px);
+        --webkit-backdrop-filter: blur(10px);
+        font-size: 20px;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .main_nav {
+        display: none;
+    }
+
+    .show_nav {
+        padding-top: 2em;
+        display: flex;
+        width: 100%;
+        /* initially view-width the main mistake */
+        height: 90vh;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .main_nav li {
+        width: 100%;
+        height: 50px;
+        font-size: 25px;
+        justify-content: center;
+        text-align: center;
+        padding: 0%;
+    }
+
+    .navbar_toggle {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 30px;
+        color: #fff;
+        background: transparent;
+        border-color: transparent;
+        transition: all 0.3s linear;
+        cursor: pointer;
+        display: block;
+    }
+
+    .logo_header {
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 1em;
+        /* margin-right: 2%; */
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .main_nav li .nav_links {
+        font-size: 1.4rem;
+    }
+
+}
+
+/* first section */
+
+#first-sec {
+    position: absolute;
+    width: 90%;
+    height: 60vh;
+    margin: 7em 0 0 4.5em;
+    padding-top: 5em;
+    display: grid;
+    place-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: var(--pri-color);
+    text-align: center;
+    font-size: 8rem;
+    font-family: var(--heading-ff);
+    text-transform: uppercase;
+    /* letter-spacing: 2px; */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0);
+    }
+}
+
+.catchPhrase {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--pry-ff);
+    font-weight: 600;
+    text-transform: capitalize;
+    animation: fadeInAnimation2 ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+@keyframes fadeInAnimation2 {
+    0% {
+        opacity: 0;
+        transform: translate(0, 50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0);
+    }
+}
+
+/* button */
+#bookNow {
+    height: 4.5em;
+    width: 12em;
+    border: 1px solid var(--sec-clr);
+    background: rgb(167, 167, 167);
+    transition: all 600ms;
+    margin: 2em 0 0 32em;
+    animation: fadeInAnimation2 ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+#bookNow:hover {
+    cursor: pointer;
+    color: var(--tet-clr);
+    border: var(--sec-clr);
+    background: var(--sec-clr);
+}
+
+#bookNow .booking-link {
+    font-size: 1.1rem;
+    color: var(--sec-clr);
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color 600ms;
+}
+
+#bookNow:hover .booking-link {
+    cursor: pointer;
+    color: var(--tet-clr);
+}
+
+
+/* second section */
+
+.sec-section {
+    width: 100%;
+    height: 111vh;
+    margin-top: 1em;
+    padding-top: 1em;
+    background-color: var(--pri-color);
+}
+
+#rooms {
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: var(--heading-ff);
+    text-transform: uppercase;
+    color: var(--sec-clr);
+}
+
+/* the container for the moving carousels */
+.carousel_items {
+    display: flex;
+    wrap: nowrap;
+    overflow: hidden;
+}
+
+.carousel_item {
+    position: relative;
+    min-width: 100%;
+    height: 100vh;
+    transition: all 0.5s linear;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel_text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--pri-color);
+    text-shadow: 1px 1px black;
+    font-size: calc(1.5rem + 0.3vw);
+    font-weight: bolder;
+    opacity: 0;
+    text-transform: capitalize;
+    font-family: var(--main-ff);
+    transition: 
+        opacity 900ms, 
+            bottom 900ms;
+}
+
+.carousel_item:hover .carousel_text {
+    opacity: 1;
+    bottom: 10%;
+}
+
+.item1 {
+    background-image: url('Images_room/suite-rooms.jpg');
+}
+
+.item2 {
+    background-image: url('Images_room/deluxe\ room\ \(2\).jpg');
+}
+
+.item3 {
+    background-image: url('Images_room/standard\ room.jpg');
+}
+
+.item4 {
+    background-image: url('Images_room/deluxe\ room\ for\ 2.jpg');
+}
+
+.item5 {
+    background-image: url('Images_room/standard\ room\ for\ 2.jpg');
+}
+
+.item6 {
+    background-image: url('Images_room/suite\ room\ for\ two.jpg');
+}
+
+.item7 {
+    background-image: url('Images_room/wardrobes.jpg');
+}
+
+.item8 {
+    background-image: url('Images_room/hotel\ Bathroom.jpg');
+}
+
+.item9 {
+    background-image: url('Images_room/jacuzzi-terrace.webp');
+}
+
+.item10 {
+    background-image: url('Images_room/spa-massage-concept-with-woman.webp');
+}
+
+.item11 {
+    background-image: url('Images_room/pool-empty-rest-travel-infinity.webp');
+}
+
+.item12 {
+    background-image: url('Images_room/location-symbol-with-landscape-background.webp');
+}
+
+.item13 {
+    background-image: url('Images_room/young-bodybuilder-running-cardio-workout-looking-gym-window.webp');
+}
+
+.item14 {
+    background-image: url('Images_room/hammock.webp');
+}
+
+/* the About us section */
+#about-us {
+    width: 100%;
+    height: 120vh;
+    margin-top: 1em;
+    background-color: var(--pri-color);
+    padding-top: 1em;
+}
+
+.about-us {
+    color: rgb(33, 39, 53);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--heading-ff);
+}
+
+.about-container {
+    width: 90%;
+    height: 80vh;
+    margin: 0 0 0 5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-details,
+.about-img-container {
+    width: 39em;
+    height: 35em;
+    /*  */
+}
+
+/*  contents details of bahmas hotel */
+
+.about-details {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-direction: column;
+    padding-left: 1em;
+}
+
+.about-bahmas,
+.sec-paragraph,
+.third-paragraph,
+.last-paragraph {
+    font-size: 1rem;
+    color: #0c0c0c;
+    /* border: 1px solid #000; */
+    text-align: left;
+    padding-bottom: 1em;
+}
+
+h3 {
+    padding-bottom: 1em;
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #0c0c0c;
+}
+
+/* Container that will contain certain pictures */
+
+.about-img-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.first-box-img,
+.sec-box-img {
+    width: 21em;
+    height: 28em;
+    border: 2px solid white;
+    overflow: hidden;
+    
+}
+
+.vert-img {
+    height: 34.9em;
+    width: 21em;
+}
+
+/* Contains sub-image */
+
+.sec-box-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sub-box-img {
+    width: 20em;
+    height: 14em;
+    border: 2px solid white;
+    overflow: hidden;
+}
+
+.sub-img {
+    width: 21em;
+    height: 15em;
+}
+
+.vert-img,
+.sub-img {
+    transition: transform 500ms;
+}
+
+.vert-img:hover,
+.sub-img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* contact section */
+#contact-us {
+    
+    width: 100%;
+    height: 50vh;
+    margin-top: 1em;
+    background-color: rgb(33, 39, 53);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sub-contacts {
+    width: 30%;
+    height: 35vh;
+    padding-left: 1em;
+    flex-wrap: wrap;
+}
+
+.first-sub {
+    padding-top: 1em;
+}
+
+.get-in-touch {
+    color: var(--tet-clr);
+    text-align: left;
+    font-size: 2rem;
+    font-family: var(--heading-ff);
+    margin-top: 0.7em;
+}
+
+.info {
+    color: var(--pri-color);
+    font-size: 1.3rem;
+    margin-bottom: 2em;
+}
+
+.contact-icons {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 55%;
+}
+
+.contact-links {
+    width: 2em;
+    height: 4vh;
+    color: rgb(252, 135, 68);
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 600ms ease-in-out;
+}
+
+
+.contact-links:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    transform: scale(1.10);
+}
+
+/* sec-sub */
+.sec-sub {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-top: 2em;
+}
+
+.contact-heading {
+    color: var(--tet-clr);
+    font-size: 2rem;
+}
+
+.link {
+    margin-bottom: 1em;
+    color: rgb(255, 255, 255);
+}
+
+.subscribe-heading {
+    color: var(--tet-clr);
+    font-size: 2rem;
+}
+
+.third-sub {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-top: 1em;
+}
+
+.subscribe-paragraph {
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+
+.send-container {
+    width: 25em;
+    height: 8em;
+    border-radius: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#send-input {
+    height: 9em;
+    width: 23em;
+    font-family: var(--pry-ff);
+    border: 1px solid var(--tet-clr);
+    outline: none;
+    background: transparent;
+    resize: none;
+}
+
+textarea {
+    color: var(--pri-color);
+    padding: 0.5em 0 0 0.5em;
+}
+
+#send-input::placeholder {
+    color: rgb(255, 255, 255);
+    padding: 0.1em 0 0 0.5em;
+    caret-color: var(--pri-color);
+}
+
+#mail-btn {
+    width: 3em;
+    height: 3em;
+    font-size: 1rem;
+    background-color: rgb(252, 135, 68);
+    border: 0;
+    outline: none;
+    border-radius: 1em;
+}
+
+#mail-btn:hover {
+    background-color: rgb(219, 119, 61);
+}
+
+.mail-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.copy-right {
+    background: var(--sec-clr);
+    text-align: center;
+    color: var(--pri-color);
+    padding: 0.5em 0 1em 0;
+}
+
+
+/* Mobile Responsive */
+@media only screen and (max-width: 769px) {
+    #first-sec {
+        width: 100%;
+        height: 60vh;
+        margin-left: auto;
+        margin-top: 10em;
+    }
+
+    h2 {
+        font-size: 2.9rem;
+    }
+
+    .catchPhrase {
+        font-size: 1.7rem;
+    }
+
+    #bookNow {
+        margin: 1.5em 0 0 7.8em;
+    }
+
+    /* second section */
+
+    .sec-section {
+        width: 100%;
+        height: 50vh;
+    }
+
+    #rooms {
+        font-size: 2rem;
+    }
+
+    /* Moving carousels */
+    .carousel_item {
+        position: relative;
+        max-width: 100%;
+        height: 40vh;
+        transition: all 0.5s linear;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+    }
+
+    /* About us section */
+    .about-us {
+        font-size: 2rem;
+    } 
+
+    .about-container {
+        width: 100%;
+        height: 90vh;
+        margin-top: -1em;
+        margin-left: auto;
+        padding-bottom: 25em;
+    }
+
+    .about-img-container {
+        display: none;
+    }
+
+    .about-details {
+        width: 100%;
+        height: 40vh;
+        padding-top: 42em;
+        font-size: 0.5rem;
+    }
+
+    h3 {
+        text-align: left;
+    }
+
+    /* contact */
+    .contact-icons {
+        width: 17em;
+    }
+    #contact-us {
+        width: 100%;
+        height: 125vh;    
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;      
+    }
+
+    .sub-contacts {
+        height: 40vh;
+        width: 20em;
+    }
+
+    .first-sub {
+        padding-top: 2em;
+    }
+
+    .send-container {
+        width: 19em;
+    }
+
+    #send-input {
+        width: 18em;
+    }
+}
+
+/* tablet and ipad */
+@media only screen and (min-width: 770px) and (max-width: 991px) {
+    #first-sec {
+        width: 100%;
+        height: 75vh;
+        margin-top: 12em;
+        margin-left: auto;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 6.1rem;
+    }
+
+    .catchPhrase {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    #bookNow {
+        height: 3em;
+        width: 10em;
+        font-size: 1.5rem;
+        margin: 2em 0 0 12em;
+    }
+
+    /* second section */
+    #rooms {
+        font-size: 2rem;
+    }
+
+    /* Moving Carousels */
+    .sec-section {
+        height: 60vh;
+    }
+    .carousel_item {
+        position: relative;
+        max-width: 100%;
+        height: 50vh;
+        transition: all 0.5s linear;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    /* about us */
+    #about-us {
+        height: 90vh;
+        border: 1px solid red;
+    }
+
+    /* heading of about us */
+    .about-us {
+        font-size: 2rem;
+    }
+
+    .about-container {
+        width: 100%;
+        height: 100vh;
+        margin-left: auto;
+        margin-top: -1em;
+    }
+
+    .about-img-container {
+        width: 50%;
+        height: 35vh;
+    }
+
+    .first-box-img,
+    .sec-box-img {
+        display: none;
+    }
+
+    .about-details {
+        width: auto;
+        height: 45vh;
+        margin-bottom: 15em;
+        position: absolute;
+    }
+
+    .sec-paragraph,
+    .about-bahmas,    
+    .last-paragraph {
+        font-size: 1.3rem;
+    }
+
+    /* .sec-paragraph, */
+    .third-paragraph {
+        display: none;
+    }
+
+    /* contact */
+    #contact {
+        font-size: 2rem;
+    }
+
+    #contact-us {
+        height: 150vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sub-contacts {
+        height: 40vh;
+        width: 60vw;
+    }
+
+    .send-container {
+        width: 25em;
+        height: 8em;
+    }
+
+    #send-input {
+        height: 9em;
+        width: 24em;
+    }
+    
+}
+
+/* special devices */
+@media only screen and (min-width: 992px) and (max-width: 1388px) {
+    .about-container {
+        width: 100%;
+        height: 100vh;
+        margin-left: auto;
+        margin-top: -4em;
+        padding-bottom: 4em;
+    }
+
+    .about-img-container {
+        width: 45%;
+        height: 58vh;
+        
+    }
+
+    .about-details {
+        width: 50%;
+        height: 90%;
+    }
+
+    .first-box-img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .sec-box-img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .about-bahmas,
+    .sec-paragraph,
+    .third-paragraph,
+    .last-paragraph {
+        font-size: 1rem;
+    }
+
+    /* contact us */
+    #contact-us {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50vh;
+        flex-wrap: wrap;
+    }
+
+    .sub-contacts {
+        width: 32%;
+        height: 40vh;
+        padding-left: 1em;
+    }
+
+    .contact-icons {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 17em;
+    }
+
+    .get-in-touch,
+    .contact-heading,
+    .subscribe-heading {
+        font-size: 1.6rem;
+    }
+
+    .info,
+    .link,
+    .subscribe-paragraph {
+        font-size: 1rem;
+    }
+
+    .send-container {
+        width: 18em;
+        height: 7em;
+        border-radius: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #send-input {
+        height: 7em;
+        width: 17em;
+        font-family: var(--pry-ff);
+        border: 1px solid var(--tet-clr);
+        outline: none;
+    }
+}

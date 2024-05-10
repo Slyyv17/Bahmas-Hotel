@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Booking page </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="icon" type="image/x-icon" href="images/Bahmas_Logo_2-removebg-preview.png">
+</head>
+<body>
+    <!-- Booking terminal section-->
+    <section id="booking-terminal">
+        <div class="heading-box">
+            <h2 class="booking-header">Book a room with us</h2>
+        </div>
+    
+        <!-- User Email -->
+        <div class="email-lbl-box">
+            <label for="email" class="email-text">Email</label>
+        </div>
+    
+        <div class="email-box">
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+    
+        <!-- Username -->
+        <div class="username-lbl-box">
+            <label for="username" class="username-text">Username</label>
+        </div>
+    
+        <div class="username-box">
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+    
+        <!-- Check in -->
+        <div class="check-in-lbl-box">
+            <label for="check-in" class="check-in">Check-in</label>
+        </div>
+    
+        <div class="check-in-box">
+            <input type="date" id="check-in">
+        </div>
+    
+        <!-- Check out -->
+        <div class="check-out-lbl-box">
+            <label for="check-out" class="check-out">Check-out</label>
+        </div>
+    
+        <div class="check-out-box">
+            <input type="date" id="check-out">
+        </div>
+    
+        <!-- Rooms -->
+        <div class="room-lbl-box">
+            <label for="rooms" class="room">Room</label>
+        </div>
+    
+        <div class="room-box">
+            <select id="rooms">
+                <option value="suite">Suite</option>
+                <option value="deluxe">Deluxe</option>
+                <option value="standard">Standard</option>
+            </select>
+        </div>
+    
+        <!-- Guest -->
+        <div class="guest-lbl-box">
+            <label for="guests" class="guests">Guest(s)</label>
+        </div>
+        <div class="guest-box">
+            <select id="guests">
+                <option value="6">6 above</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">Individual</option>
+            </select>
+        </div>
+    
+        <div class="booking-btn-box">
+            <button id="booking-btn" onclick="bookNow()">Submit <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    
+        <div id="output">
+            <p id="result"></p>
+        </div>
+    </section>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

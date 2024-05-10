@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bahmas Hotel </title>
+    <link rel="stylesheet" href="Bahmas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/Bahmas_Logo_2-removebg-preview.png">
+</head>
+<body>
+
+    <div id="mainContainer">
+        <!-- Desktop view -->
+        <main id="main">
+
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <div class="logo_header">
+                    <a href="index.html" class="logo">Bahmas <span class="logo-words">Hotel</span></a>
+                    <button class="navbar_toggle">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                </div>
+            
+            
+                <ul class="main_nav">
+                    <li>
+                        <a href="index.html" class="nav_links first-active">Home</a>
+                    </li>
+                    <li>
+                        <a href="#facilities" class="nav_links">facilities</a>
+                    </li>
+                    <li>
+                        <a href="#about-us" class="nav_links">about us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav_links">gallery</a>
+                    </li>
+                    <li>
+                        <a href="#contact-us" class="nav_links">contact</a>
+                    </li>
+                </ul>
+            
+            </nav>
+
+            <!-- It contains the main heading an paragraph -->
+            <section id="first-sec">
+                <h2>bahmas hotel</h2>
+                <p class="catchPhrase">top hotel in the city</p>
+                <button id="bookNow" onclick="btnBookNow()">
+                    <a href="booking.html" target="_blank" class="booking-link">book now <i class="fa-solid fa-arrow-right"></i></a>
+                </button>
+            </section>
+        </main>
+
+        <section class="sec-section" id="facilities">
+            <h2 id="rooms">our facilities </h2>
+
+            <!-- The container for the moving carousels -->
+            <div class="carousel-container">
+                <div class="carousel_items">
+                    <div class="carousel_item item1">
+                        <p class="carousel_text">suite rooms </p>
+                    </div>
+
+                    <div class="carousel_item item2">
+                        <p class="carousel_text">deluxe rooms</p>
+                    </div>
+
+                    <div class="carousel_item item3">
+                        <p class="carousel_text">standard rooms</p>
+                    </div>
+
+                    <div class="carousel_item item4">
+                        <p class="carousel_text"> duo deluxe bed </p>
+                    </div>
+
+                    <div class="carousel_item item5">
+                        <p class="carousel_text"> duo standard bed </p>
+                        
+                        <!-- Specifications of each rooms -->
+                    </div>
+
+                    <div class="carousel_item item6">
+                        <p class="carousel_text">duo suite bed</p>
+                    </div>
+
+                    <div class="carousel_item item7">
+                        <p class="carousel_text"> wardrobe </p>
+                        
+                        <!-- Specifications of each rooms -->
+                    </div>
+
+                    <div class="carousel_item item8">
+                        <p class="carousel_text">bathroom</p>
+                    </div>
+
+                    <div class="carousel_item item9">
+                        <p class="carousel_text"> jacuzzi </p>
+                    </div>
+
+                    <div class="carousel_item item10">
+                        <p class="carousel_text">spa</p>
+                    </div>
+
+                    <div class="carousel_item item11">
+                        <p class="carousel_text">swimming pool</p>
+                    </div>
+
+                    <div class="carousel_item item12">
+                        <p class="carousel_text">golf course</p>
+                    </div>
+
+                    <div class="carousel_item item13">
+                        <p class="carousel_text">gym</p>
+                    </div>
+
+                    <div class="carousel_item item14">
+                        <p class="carousel_text">Beach</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="about-us">
+            <h3 class="about-us" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">about us</h3>
+        
+            <!-- About us -->
+            <article class="about-container">
+        
+                <!-- Container that will contain certain pictures -->
+                <div class="about-img-container" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
+                    <div class="first-box-img">
+                        <img class="vert-img" src="Images_About/thailand-pool-nature-swimming-relax.webp" loading="lazy">
+                    </div>
+        
+                    <!-- Contains sub-image -->
+                    <div class="sec-box-img">
+                        <div class="sub-box-img">
+                            <img class="sub-img image-1" src="Images_About/shot-panoramic-composition-living-room.webp"
+                                loading="lazy">
+                        </div>
+        
+                        <div class="sub-box-img">
+                            <img class="sub-img image-2" src="Images_About/vintage-twilight-pool-nature-light.webp"
+                                loading="lazy">
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- The About us content -->
+                <div class="about-details">
+                    <div class="about-bahmas" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
+                        <h3 class="Welcome"> Welcome to BAHMAS HOTEL - Top Hotel In The City </h3>
+                        <p>
+                            Located in the heart of Nigeria, Bahmas Hotel is your premier destination for unforgettable stays.
+                            With
+                            8 years of excellence in hospitality, we pride ourselves on delivering personalized service and
+                            creating cherished
+                            memories for every guest.
+                        </p>
+                    </div>
+        
+        
+                    <div class="sec-paragraph" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
+                        <h3 class="philosophy">Our Promise: Comfort, Luxury, Convenience</h3>
+                        <p>
+                            Step into a world of luxury and tranquility with our thoughtfully curated accommodations. From cozy
+                            retreats to spacious
+                            suites, each room offers modern amenities and breathtaking views.
+                        </p>
+                    </div>
+        
+        
+                    <div class="third-paragraph" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
+                        <h3 class="excellence"> our commitment to excellence </h3>
+                        <p>
+                            Indulge in culinary delights, relax by the pool, or rejuvenate at our spa—our facilities are
+                            designed to enhance your
+                            stay.
+                        </p>
+                    </div>
+        
+                    <div class="last-paragraph" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
+                        <h3 class="book-stay"> book your stay today </h3>
+                        <p>
+                            Whether you're traveling for business or leisure, Bahmas Hotel invites you to experience the epitome
+                            of hospitality.
+                            Discover a world of luxury, comfort, and unparalleled service that will leave you with cherished
+                            memories for a
+                            lifetime. Book your stay with us today and embark on a journey of unforgettable experiences.
+                        </p>
+                    </div>
+                </div>
+        
+            </article>
+        
+        </section>
+
+        <!-- Contact us -->
+
+        <!-- Get in touch -->
+        <footer id="contact-us">
+            <div class="sub-contacts first-sub">
+                <h3 class="get-in-touch"> get in touch </h3>
+                <p class="info"> Get in touch with us and follow us through this various platforms. </p>
+                <div class="contact-icons">
+                    <a href="#" class="contact-links">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="contact-links">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="contact-links">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a href="#" class="contact-links">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+                <!-- contact us -->
+            <div class="sub-contacts sec-sub">
+                <h3 class="contact-heading"> contact us </h3>
+
+                <a href="tel:+234 9030330349" class="link">
+                <i class="fa-solid fa-phone"></i> +234 9030330349
+                </a>
+
+                <a href="mailto: ememevictor08@gmail.com" class="link">
+                    <i class="uil uil-envelope-alt"></i> ememevictor08@gmail.com
+                </a>
+
+                <a href="#" class="link">
+                    <i class="fa-solid fa-location-dot"></i> Illishan-remo, Babcock University
+                </a>
+
+                <a href="#" class="link">
+                    <i class="fa-solid fa-calendar-days"></i> Mon-Sat: 9:00am-22:00pm Sun: 12:00pm-18:00pm
+                </a>
+            </div>
+
+            <!-- Subscription container -->
+            <div class="sub-contacts third-sub">
+                <h3 class="subscribe-heading"> Subscribe us </h3>
+                <p class="subscribe-paragraph"> message us for more information and enquiries. </p>
+
+                <div class="send-container">
+                    <textarea cols="30" rows="5" id="send-input" placeholder="Enter your Message..."></textarea>
+                    <button id="mail-btn" onclick="mailSend()"> 
+                        <a class="mail-link" href="mailto:ememevictor08@gmail.com">
+                            <i class="uil uil-message"></i>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </footer>
+
+        <div class="copy-right">
+            Copyright &copy; 2024 Bahmas Hotel, Victor Ememe
+        </div>
+
+        <!-- Output -->
+        <p id="output"></p>
+    </div>
+    <script src="Bahmas.js"></script>
+</body>
+</html>
